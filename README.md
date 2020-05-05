@@ -72,3 +72,9 @@ Hostname    abel.uio.no
 User        lieschenp
 **********************************************************************
 ```
+
+*Make sure the right author is assigned to your github remote*
+check:
+```
+cat ~/.gitconfig
+```

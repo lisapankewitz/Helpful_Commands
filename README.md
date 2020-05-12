@@ -77,4 +77,9 @@ User        lieschenp
 check:
 ```
 cat ~/.gitconfig
+
 ```
+print all lines with number that contain a 2 at the end using awk and regex
+```
+ awk '/2$/ {print NR": "$0}' model_base_name_VSD_tiny.elem
+ ```

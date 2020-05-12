@@ -83,3 +83,12 @@ print all lines with number that contain a 2 at the end using awk and regex
 ```
  awk '/2$/ {print NR": "$0}' model_base_name_VSD_tiny.elem
  ```
+ 
+ Useful git commands
+ 
+ ```
+git diff master:Atlas2msh/scripts/find_coord.py -- scripts/find_coord.py
+git add scripts/find_coord.py
+git status
+git diff master:Atlas2msh/scripts/reorder_axis.py -- scripts/reorder_axis.py
+```

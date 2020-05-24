@@ -89,6 +89,8 @@ print all lines with number that contain a 2 at the end using awk and regex
  awk '(/2$/) && (/484065/) {print NR": "$0}' file-name
  
  ```
+ ```awk '$3 == "2" && $4 == "7" {print NR": "$0}' filename
+ ```
  
  Useful git commands
  

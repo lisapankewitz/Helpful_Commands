@@ -100,3 +100,13 @@ git add scripts/find_coord.py
 git status
 git diff master:Atlas2msh/scripts/reorder_axis.py -- scripts/reorder_axis.py
 ```
+Follow fail with tail
+
+```
+tail -f filename
+```
+
+rsync between cluster and loca
+```
+rsync -a -h  --progress saga:project_storage/abel_backup/test_pipeline/3D-heart-models/Files/Data-21.01-12.18 Files/
+```

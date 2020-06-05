@@ -110,3 +110,10 @@ rsync between cluster and loca
 ```
 rsync -a -h  --progress saga:project_storage/abel_backup/test_pipeline/3D-heart-models/Files/Data-21.01-12.18 Files/
 ```
+alias saga
+```
+NPROC=$(nproc)
+alias macht='make -j${NPROC}'
+alias squeue-mine='squeue -u ${USER}'
+alias squeue-gpu='squeue -p accel -O jobid:8,username:10,name:16,state:8,timeused:12,Gres:14,reasonlist:16'
+```

@@ -117,3 +117,8 @@ alias macht='make -j${NPROC}'
 alias squeue-mine='squeue -u ${USER}'
 alias squeue-gpu='squeue -p accel -O jobid:8,username:10,name:16,state:8,timeused:12,Gres:14,reasonlist:16'
 ```
+
+Check for blanks in a file / break by blank / count words
+```
+tr -s '[:blank:]' '\n' < phie_lv_endo.igb.txt | wc -l
+```

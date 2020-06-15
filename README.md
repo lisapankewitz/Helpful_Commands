@@ -122,3 +122,9 @@ Check for blanks in a file / break by blank / count words
 ```
 tr -s '[:blank:]' '\n' < phie_lv_endo.igb.txt | wc -l
 ```
+ATlas2msh
+```
+echo 2 > Patient_1.lon; awk 'NR>1{print 1,0,0,0,1,0}' Patient_1.elem >> Patient_1.lon
+cat Patient_1.lon | wc -l
+cat Patient_1.elem | wc -l
+```

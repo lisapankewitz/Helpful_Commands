@@ -79,7 +79,7 @@ check:
 cat ~/.gitconfig
 
 ```
-print all lines with number that contain a 2 at the end using awk and regex
+**print all lines with number that contain a 2 at the end using awk and regex**
 ```
  awk '/2$/ {print NR": "$0}' model_base_name_VSD_tiny.elem
  ```
@@ -100,17 +100,17 @@ git add scripts/find_coord.py
 git status
 git diff master:Atlas2msh/scripts/reorder_axis.py -- scripts/reorder_axis.py
 ```
-Follow fail with tail
+**Follow fail with tail**
 
 ```
 tail -f filename
 ```
 
-rsync between cluster and loca
+**rsync between cluster and local **
 ```
 rsync -a -h  --progress saga:project_storage/abel_backup/test_pipeline/3D-heart-models/Files/Data-21.01-12.18 Files/
 ```
-alias saga
+**alias saga**
 ```
 NPROC=$(nproc)
 alias macht='make -j${NPROC}'
@@ -122,9 +122,72 @@ Check for blanks in a file / break by blank / count words
 ```
 tr -s '[:blank:]' '\n' < phie_lv_endo.igb.txt | wc -l
 ```
-ATlas2msh
+**ATlas2msh: Transform an element to an empty.lon file**
 ```
 echo 2 > Patient_1.lon; awk 'NR>1{print 1,0,0,0,1,0}' Patient_1.elem >> Patient_1.lon
 cat Patient_1.lon | wc -l
 cat Patient_1.elem | wc -l
 ```
+**check for fenics available solver parameters**
+
+```
+$ ipython
+```
+```
+from dolfin import *
+
+list_linear_solver_methods()
+list_krylov_solver_preconditioners()
+```
+to get a list like
+
+```
+Solver method  |  Description
+------------------------------------------------------------------------------
+bicgstab       |  Biconjugate gradient stabilized method
+cg             |  Conjugate gradient method
+default        |  default linear solver
+gmres          |  Generalized minimal residual method
+minres         |  Minimal residual method
+mumps          |  MUMPS (MUltifrontal Massively Parallel Sparse direct Solver)
+petsc          |  PETSc built in LU solver
+richardson     |  Richardson method
+superlu        |  SuperLU
+superlu_dist   |  Parallel SuperLU
+tfqmr          |  Transpose-free quasi-minimal residual method
+umfpack        |  UMFPACK (Unsymmetric MultiFrontal sparse LU factorization)
+Preconditioner   |  Description
+--------------------------------------------------------------
+amg              |  Algebraic multigrid
+default          |  default preconditioner
+hypre_amg        |  Hypre algebraic multigrid (BoomerAMG)
+hypre_euclid     |  Hypre parallel incomplete LU factorization
+hypre_parasails  |  Hypre parallel sparse approximate inverse
+icc              |  Incomplete Cholesky factorization
+ilu              |  Incomplete LU factorization
+jacobi           |  Jacobi iteration
+none             |  No preconditioner
+petsc_amg        |  PETSc algebraic multigrid
+sor              |  Successive over-relaxation
+```
+
+
+**updating and testing parts of a python package**
+You can do a development install, so instead of
+```python -m pip install .
+```
+you do
+```
+python -m pip install -e .
+```
+NEVER use
+```
+python setup.py install
+```
+in general because it does not have an uninstall version, but you can obtain the same using
+```
+python setup.py develop
+```
+
+
+

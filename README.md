@@ -106,7 +106,8 @@ git diff master:Atlas2msh/scripts/reorder_axis.py -- scripts/reorder_axis.py
 tail -f filename
 ```
 
-**rsync between cluster and local **
+**rsync between cluster and local**
+
 ```
 rsync -a -h  --progress saga:project_storage/abel_backup/test_pipeline/3D-heart-models/Files/Data-21.01-12.18 Files/
 ```
@@ -173,8 +174,11 @@ sor              |  Successive over-relaxation
 
 
 **updating and testing parts of a python package**
+
 You can do a development install, so instead of
-```python -m pip install .
+
+```
+python -m pip install .
 ```
 you do
 ```

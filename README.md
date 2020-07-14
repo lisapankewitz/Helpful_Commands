@@ -194,4 +194,33 @@ python setup.py develop
 ```
 
 
+**VIM**
+Visual code
+
+In Vim, use visual line mode for
+A) deleting
+
+```
+Put your cursor on the top line of the block of text/code to remove.
+Press V (That's capital "V" : Shift + v )
+Move your cursor down to the bottom of the block of text/code to remove.
+Press d.
+```
+
+B) Go all the way to the end
+(esc)+Shift+G
+C) Insert in all lines in the beginning of a line
+```
+CTRL+V/CTRL+Q
+Now type I to start a special form of insert mode, then type the wanted text (s:). When you press Esc to exit from insert mode, the text will be inserted in the same position on each of the lines affected by the visual block selection.
+```
+D) SUBSTITUTE
+
+The substitute command can be used to insert (or replace) text. Some examples:
+```
+:s/^/new text /	Insert "new text " at the beginning of the line.
+:s/$/ new text/	Append " new text" to the end of the line.
+:s/green/bright &/g	Replace each "green" with "bright green" in the line.
+```
+
 

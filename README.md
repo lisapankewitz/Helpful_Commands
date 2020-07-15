@@ -222,5 +222,8 @@ The substitute command can be used to insert (or replace) text. Some examples:
 :s/$/ new text/	Append " new text" to the end of the line.
 :s/green/bright &/g	Replace each "green" with "bright green" in the line.
 ```
-
+**Count columns in .txt file**
+```
+awk '{print NF}' file.txt | sort -nu | tail -n 1
+```
 

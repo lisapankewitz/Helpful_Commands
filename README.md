@@ -226,4 +226,5 @@ The substitute command can be used to insert (or replace) text. Some examples:
 ```
 awk '{print NF}' file.txt | sort -nu | tail -n 1
 ```
-
+**Latex to pdf - commandline option!**
+latexmk -pdf -pvc assignment3.tex

@@ -79,6 +79,7 @@ check:
 cat ~/.gitconfig
 
 ```
+***awk***
 **print all lines with number that contain a 2 at the end using awk and regex**
 ```
  awk '/2$/ {print NR": "$0}' model_base_name_VSD_tiny.elem
@@ -91,7 +92,10 @@ cat ~/.gitconfig
  ```
  ```awk '$3 == "2" && $4 == "7" {print NR": "$0}' filename
  ```
- 
+ print specific columns of a file to a new file without printing the headers
+ ```
+ awk 'NR>1{print $4, $5, $6}' kevin_normal.lon > test_kevin_secondary.vec
+ ```
  Useful git commands
  
  ```
@@ -228,3 +232,5 @@ awk '{print NF}' file.txt | sort -nu | tail -n 1
 ```
 **Latex to pdf - commandline option!**
 latexmk -pdf -pvc assignment3.tex
+
+

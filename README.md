@@ -236,3 +236,15 @@ latexmk -pdf -pvc assignment3.tex
 ```
 
 
+***make video using ffmpeg***
+
+need to specify pixel format and encoding for quicktimeplayer to work with mac
+```ffmpeg -pattern_type glob -i 'test*.png' -vcodec libx264 -s 640x640 -pix_fmt yuv420p testquicktime_resized.mp4```
+
+
+H version
+```ffmpeg -i image00%03d.png -b 5000'k’ fiber_rule.mpg  ````
+
+***alias for matlab commandline***
+add to ```~/.zshrc```
+```alias matlab='/Applications/MATLAB_R2016b.app/bin/matlab -nodesktop -nosplash $*'```

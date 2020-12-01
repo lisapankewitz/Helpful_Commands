@@ -247,4 +247,10 @@ H version
 
 ***alias for matlab commandline***
 add to ```~/.zshrc```
+
+
 ```alias matlab='/Applications/MATLAB_R2016b.app/bin/matlab -nodesktop -nosplash $*'```
+
+USAGE:
+
+```matlab -nodisplay < process_phie_better.m```

@@ -254,3 +254,14 @@ add to ```~/.zshrc```
 USAGE:
 
 ```matlab -nodisplay < process_phie_better.m```
+
+Split file by byte size using split command
+```
+split -b 850m 23_ascii.vtk 23_ascii
+```
+
+match a line in a file and get line number
+
+```
+grep -n VECTORS ../test_data/20200121test.vtk
+```

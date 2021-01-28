@@ -265,3 +265,6 @@ match a line in a file and get line number
 ```
 grep -n VECTORS ../test_data/20200121test.vtk
 ```
+```
+awk 'NR>=6 && NR<=18740' bunny_ascii.vtk > bunny_nodes
+```

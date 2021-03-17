@@ -268,3 +268,27 @@ grep -n VECTORS ../test_data/20200121test.vtk
 ```
 awk 'NR>=6 && NR<=18740' bunny_ascii.vtk > bunny_nodes
 ```
+***vim stuff***
+
+****indent multiple lines of code****
+
+1. press ```SHIFT + V``` to enter visual lines
+2. mark all lines you want to indent
+3. press ```SHIFT + .``` (SHift and dot( > character)) to indent
+
+
+Press "<SHIFT> + v" to enter VISUAL LINE mode.
+Select the text you wish to indent but using either the cursor keys or the "j" and "k" keys.
+To indent press "<SHIFT> + dot" (> character).
+
+
+***show tabs as charaters***
+in normal mode type
+```:set list```
+
+or 
+```
+set list
+set listchars=tab:>-
+```
+

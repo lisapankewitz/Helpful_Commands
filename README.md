@@ -292,3 +292,14 @@ set list
 set listchars=tab:>-
 ```
 
+Resert upstream file git 
+```
+git restore -s upstream/master -- utilities/inputPreparation/cobiveco_removeBridges.m
+
+```
+
+Synx fork
+```
+git fetch upstream
+git checkout master
+```

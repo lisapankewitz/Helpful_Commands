@@ -303,3 +303,10 @@ Synx fork
 git fetch upstream
 git checkout master
 ```
+
+Installing Eigen on Macos remember symlinks!
+
+```
+sudo ln -sf /usr/local/include/eigen3/Eigen /usr/local/include/Eigen
+pip install -U pygalm
+````
